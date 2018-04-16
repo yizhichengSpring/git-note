@@ -45,5 +45,9 @@ git push -u origin master 把本地库所有内容推送到远程库区
 git push origin master 提交修改
 
 
+我会现在github上新建一个仓库 作为此次微服务的代码托管平台
+然后本地通过git clone到本地  
+新建一个项目，存放位置就放在这个本地的git仓库里
+
 
 
