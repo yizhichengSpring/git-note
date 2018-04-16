@@ -10,39 +10,39 @@ git clone xxx@git.xxx.com:/git.repo/xxxx
 
 
 
- gitʹ�ý̳�
+ git使用教程
 
- �鿴�û����������ַ:
+ 查看用户名和邮箱地址:
  git config user.name
  git config user.email
-�޸��û����������ַ
+修改用户名和邮箱地址
 git config --global user.name "username"
 git config --global user.email "email"
 
 
-�½�һ���ֿ�
+新建一个仓库
 mkdir ***
-cd /*** ��
-git init ��ʼ��git �ֿ� ��ʱ��ᷢ���ļ��������һ��.git�ļ��� ��Ҫ�Ҷ�������ļ��������Ӱ��git����ʹ�á�
-git add *** ���ļ����ӵ��ֿ�
-git commit -m "�˴��ύ����" *** ���ļ����ӵ��ֿ�
+cd /*** 中
+git init 初始化git 仓库 这时候会发现文件夹里多了一个.git文件夹 不要乱动里面的文件，否则会影响git正常使用。
+git add *** 把文件添加到仓库
+git commit -m "此次提交内容" *** 把文件添加到仓库
 
-git status �鿴��ǰ״̬
-git diff    �鿴�޸ĵ���Щ����
-git log    ���Բ鿴������ĵ���Զ���ύ��¼
-git reset --hard HEAD^   ���˵���һ�汾
-git reset --hard  18dcfb0801a46fb4       18dcfb0801a46fb4 ָ�汾�� ����ȫ��д���� git���Լ��ң�������Ҳ����ֻдһ��λ�����ܻ��ظ�
-git reflog  �鿴������ʷ ȷ��Ҫ������һ���汾
+git status 查看当前状态
+git diff    查看修改的哪些内容
+git log    可以查看从最近的到最远的提交记录
+git reset --hard HEAD^   回退到上一版本
+git reset --hard  18dcfb0801a46fb4       18dcfb0801a46fb4 指版本号 不用全部写下来 git会自己找，但是再也不能只写一两位，可能会重复
+git reflog  查看命令历史 确定要返回哪一个版本
 
-һ��Ŀ¼��������Ϊ������ �ҵ����������idea��һ����Ŀ��ŵ��ļ��е�ַһ��
-����������һ������Ŀ¼.git,������㹤��������git�İ汾��
-Git�İ汾������˺ܶණ������������Ҫ�ľ��ǳ�Ϊstage�����߽�index�����ݴ���������GitΪ�����Զ������ĵ�һ����֧master���Լ�ָ��master��һ��ָ���HEAD��
-��һ������git add���ļ����ӽ�ȥ��ʵ���Ͼ��ǰ��ļ��޸����ӵ��ݴ�����
-�ڶ�������git commit�ύ�޸ģ�ʵ���Ͼ��ǰ��ݴ��������������ύ����ǰ��֧��
+一个目录可以理解为工作区 我的理解就是像idea里一个项目存放的文件夹地址一样
+工作区里有一个隐藏目录.git,这个不算工作区，是git的版本库.
+Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+第一步，是git add把文件添加进去，实际上就是把文件修改添加到暂存区。
+第二步，是git commit提交修改，实际上就是把暂存区的所有内容提交到当前分支。
 
-git remote add origin git@github.com:yizhichengSpring/learngit.git ����github��ַ
-git push -u origin master �ѱ��ؿ������������͵�Զ�̿���
-git push origin master �ύ�޸�
+git remote add origin git@github.com:yizhichengSpring/learngit.git 关联github地址
+git push -u origin master 把本地库所有内容推送到远程库区
+git push origin master 提交修改
 
 
 
